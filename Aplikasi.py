@@ -1,7 +1,14 @@
 import streamlit as st
 
 st.title('Kumpulan Aplikasi Sederhana')
-st.caption('Dibuat di phyton kemudian di tampilkan melalui Streamlit')
+st.caption(''' Kelompok 10
+1. Rahayu Puspita Dewi (7211421001)
+2. Diajeng Ayuning Ati (7211421021)
+3. Ayesha Reisla Hanifa (7211421120)
+4. Via Alfu Khasanah (7211421132)
+5. I Gusti Bagus Surya Wedanta (7211421250)''' )
+
+
 
 
 def Konverter_Jarak():
@@ -59,7 +66,7 @@ def Menghitung_Segitiga() :
     st.write('Luas Segitiga adalah %0.2f' % luas)
 
 def kiw () :
-    st.image("https://www.meme-arsenal.com/memes/95f8e2a3efbf96affa20603869dd5345.jpg")
+    st.image("https://i.pinimg.com/originals/66/0d/5a/660d5af194cc62242ed2bc6a5d88f50e.jpg")
 
 
 
