@@ -68,6 +68,13 @@ def Menghitung_Segitiga() :
 def kiw () :
     st.image("https://i.pinimg.com/originals/66/0d/5a/660d5af194cc62242ed2bc6a5d88f50e.jpg")
 
+def diskon () :
+    diskon = st.number_input('tuliskan jumlah diskon')
+    harga  = st.number_input('masukan jumlah uang')
+
+    total = (diskon/100) * harga
+
+    st.write('Jumlah yang harus anda bayar adalah =','Rp', total)
 
 
 pages = {
@@ -76,7 +83,9 @@ pages = {
     'konverter suhu'  : Konverter_Suhu,
     'Menghitung Volume Kubus' : Menghitung_Kubus,
     'Menghitung Luas Segitiga' : Menghitung_Segitiga,
-    'JANGAN BUKA YANG INI! ' : kiw,
+    'Menghitung Diskon' : diskon,
+    'JANGAN BUKA YANG INI! ' : kiw
+
 }
 selected_page = st.selectbox(
     'pilih alat',
