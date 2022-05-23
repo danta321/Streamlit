@@ -13,7 +13,6 @@ st.caption(''' Kelompok 10
 
 def Konverter_Jarak():
     st.header('Konverter jarak')
-    st.write('Aplikasi konversi kilometer ke mil', anchor='program1')
     st.caption('aplikasi ini akan mengubah angka yang dimasukan dari kilometer menjadi'
                ' mil')
 
@@ -30,7 +29,8 @@ def Konverter_Jarak():
     st.write('%0.2f Kilometer sama dengan %0.2f Mil' % (kilometer, mil))
 
 def Konverter_Suhu() :
-
+    st.header('Konverter Suhu')
+    st.caption('Aplikasi ini akan mengubah suhu celcius menjadi fahrenheit')
     # Menginput Suhu dalam Derajat Celcius
     celcius = st.number_input("Tuliskan Suhu dalam Celcius: ")
 
@@ -45,8 +45,10 @@ def blank():
     st.write ('Silahkan Pilih Sistem')
 
 def Menghitung_Kubus():
+    st.header('Menghitung Volume Kubus')
+    st.caption('aplikasi ini akan menghitung volume kubus')
     # Menginput Sisi Kubus
-    sisi = st.number_input('Tulis Sisi Kubus: ')
+    sisi = st.number_input('Tulis Sisi Kubus: ',0,)
 
     # Hitung Volume Kubus
     volume = sisi ** 3
@@ -55,6 +57,8 @@ def Menghitung_Kubus():
     st.write('Volume Kubus adalah %0.2f' % volume)
 
 def Menghitung_Segitiga() :
+    st.header('Menghitung Luas Segitiga')
+    st.caption('Aplikasi ini akan menghitung Luas Segitiga')
     # Menginput Alas dan Tinggi Segitiga
     alas = st.number_input('Tulis Alas Segitiga: ')
     tinggi = st.number_input('Tulis Tinggi Segitiga: ')
@@ -66,15 +70,17 @@ def Menghitung_Segitiga() :
     st.write('Luas Segitiga adalah %0.2f' % luas)
 
 def kiw () :
+    st.header('sudah dibilang jangan dibuka')
     st.image("https://i.pinimg.com/originals/66/0d/5a/660d5af194cc62242ed2bc6a5d88f50e.jpg")
 
 def diskon () :
-    diskon = st.number_input('tuliskan jumlah diskon')
-    harga  = st.number_input('masukan jumlah uang')
+
+    diskon = st.number_input('tuliskan jumlah diskon',0,100)
+    harga  = st.number_input('masukan jumlah uang',0,)
 
     total = (diskon/100) * harga
 
-    st.write('Jumlah yang harus anda bayar adalah =','Rp', total)
+    st.write('Jumlah yang harus anda bayar adalah =','Rp', (float(total)))
 
 
 pages = {
