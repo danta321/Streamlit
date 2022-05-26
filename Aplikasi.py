@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title('Kumpulan Aplikasi Sederhana')
-st.caption(''' Kelompok 10
+st.write(''' Kelompok 10
 1. Rahayu Puspita Dewi (7211421001)
 2. Diajeng Ayuning Ati (7211421021)
 3. Ayesha Reisla Hanifa (7211421120)
@@ -17,6 +17,7 @@ def Konverter_Jarak():
                ' mil')
 
     # Menginput Jarak dalam Satuan Kilometer
+
     kilometer = st.number_input("Tuliskan Jarak dalam Kilometer: ")
 
     # Nilai Faktor Konversi
@@ -32,7 +33,7 @@ def Konverter_Suhu() :
     st.header('Konverter Suhu')
     st.caption('Aplikasi ini akan mengubah suhu celcius menjadi fahrenheit')
     # Menginput Suhu dalam Derajat Celcius
-    celcius = st.number_input("Tuliskan Suhu dalam Celcius: ")
+    celcius = st.number_input("Tuliskan Suhu dalam Celcius: ",0)
 
     # Menghitung Suhu dalam Derajat Fahrenheit
     fahrenheit = (celcius * 1.8) + 32
@@ -60,8 +61,8 @@ def Menghitung_Segitiga() :
     st.header('Menghitung Luas Segitiga')
     st.caption('Aplikasi ini akan menghitung Luas Segitiga')
     # Menginput Alas dan Tinggi Segitiga
-    alas = st.number_input('Tulis Alas Segitiga: ')
-    tinggi = st.number_input('Tulis Tinggi Segitiga: ')
+    alas = st.number_input('Tulis Alas Segitiga: ',0)
+    tinggi = st.number_input('Tulis Tinggi Segitiga: ',0)
 
     # Hitung Luas Segitiga
     luas = (alas * tinggi) / 2
@@ -75,22 +76,53 @@ def kiw () :
 
 def diskon () :
 
-    diskon = st.number_input('tuliskan jumlah diskon',0,100)
+    diskon = st.number_input('tuliskan jumlah diskon',0)
     harga  = st.number_input('masukan jumlah uang',0,)
 
     total = (diskon/100) * harga
 
     st.write('Jumlah yang harus anda bayar adalah =','Rp', (float(total)))
 
+def diet_w () :
 
+    tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
+
+    total = (tinggi-100) - (tinggi-100) * 15/100
+
+    st.write(('berat badan ideal anda adalah'),total)
+
+def diet_m () :
+    tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
+    total = (tinggi-100) - (tinggi-100) * 10/100
+    st.write (('berat badan ideal adalah'),total)
+
+def mata_uang () :
+    uang = st.number_input('Masukan Nominal Uang (euro)',0)
+    total = uang * 15600
+    st.write (('Hasil Konversi'),'Rp', total)
+
+def jam () :
+    jam = st.number_input('masukan jam',0)
+    ayam = 60 * jam
+    st.write (('hasilnya adalah'), ayam,'menit')
+
+def yard () :
+    yard = st.number_input('masukan ukuran yard',0)
+    total = 0.914 * yard
+    st.write (('hasilnya adalah'), total,'meter')
 pages = {
     '': blank,
+    'Penghitung Berat Badan Ideal (pria)': diet_m,
+    'Penghitung Berat Badan Ideal (wanita)': diet_w,
+    'Menghitung Diskon': diskon,
+    'Konversi Mata Uang Euro ke Rupiah': mata_uang,
+    'Menghitung Luas Segitiga': Menghitung_Segitiga,
+    'Menghitung Volume Kubus': Menghitung_Kubus,
     'konverter jarak' : Konverter_Jarak,
     'konverter suhu'  : Konverter_Suhu,
-    'Menghitung Volume Kubus' : Menghitung_Kubus,
-    'Menghitung Luas Segitiga' : Menghitung_Segitiga,
-    'Menghitung Diskon' : diskon,
-    'JANGAN BUKA YANG INI! ' : kiw
+    'Konversi Jam ke Menit' : jam,
+    'Konversi Yard ke Meter' : yard,
+    'BONUS! ': kiw,
 
 }
 selected_page = st.selectbox(
