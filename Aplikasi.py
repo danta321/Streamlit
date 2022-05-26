@@ -18,7 +18,7 @@ def Konverter_Jarak():
 
     # Menginput Jarak dalam Satuan Kilometer
 
-    kilometer = st.number_input("Tuliskan Jarak dalam Kilometer: ")
+    kilometer = st.number_input("Tuliskan Jarak dalam Kilometer: ",0)
 
     # Nilai Faktor Konversi
     faktor_konversi = 0.621371
@@ -68,7 +68,7 @@ def Menghitung_Segitiga() :
     luas = (alas * tinggi) / 2
 
     # Menampilkan Hasil Perhitungan
-    st.write('Luas Segitiga adalah %0.2f' % luas)
+    st.write('Luas Segitiga adalah %0.0f' % luas)
 
 def kiw () :
     st.header('hampter')
@@ -82,7 +82,7 @@ def diskon () :
 
     total = (diskon/100) * harga
 
-    st.write('Jumlah yang harus anda bayar adalah =','Rp', (float(total)))
+    st.write('total yang harus anda bayar adalah Rp %0.0f' % total)
 
 def diet_w () :
     st.header('Menghitung berat badan ideal untuk wanita')
@@ -90,34 +90,35 @@ def diet_w () :
     tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
     total = (tinggi-100) - (tinggi-100) * 15/100
 
-    st.write(('berat badan ideal anda adalah'),total,'KG')
-    st.caption ('kurang dari hasil = berat badan anda kurang ideal')
+    st.write('berat badan ideal adalah %0.0f KG' % total)
+    st.caption ('kurang dari hasil berarti berat badan kau kurang ideal')
 def diet_m () :
     st.header('Menghitung berat badan ideal untuk pria')
 
     tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
     total = (tinggi-100) - (tinggi-100) * 10/100
 
-    st.write (('berat badan ideal adalah'),total,'KG')
-    st.caption('kurang dari hasil = berat badan anda kurang ideal')
+    st.write ('berat badan ideal adalah %0.0f KG' % total)
+    st.caption('kurang dari hasil berarti berat badan kau kurang ideal')
 
 def mata_uang () :
     st.header('konversi mata uang Euro ke Rupiah')
     st.caption('dengan nilai 1 euro = Rp.15.600')
     uang = st.number_input('Masukan Nominal Uang (euro)',0)
     total = uang * 15600
-    st.write (('Hasil Konversi'),'Rp', total)
+    st.write('Hasil Konversi Rp %0.0f' % total)
 
 def jam () :
+    st.header('Konversi Jam ke Menit')
     jam = st.number_input('masukan jam',0)
     ayam = 60 * jam
-    st.write (('hasilnya adalah'), ayam,'menit')
+    st.write ('Hasil Konversi %0.0f menit'  % ayam)
 
 def yard () :
 
     yard = st.number_input('masukan ukuran yard',0)
     total = 0.914 * yard
-    st.write (('hasilnya adalah'), total,'meter')
+    st.write ('Hasil Konversi %0.0f Meter' % total)
 pages = {
     '': blank,
     'Penghitung Berat Badan Ideal (pria)': diet_m,
@@ -126,8 +127,8 @@ pages = {
     'Konversi Mata Uang Euro ke Rupiah': mata_uang,
     'Menghitung Luas Segitiga': Menghitung_Segitiga,
     'Menghitung Volume Kubus': Menghitung_Kubus,
-    'konverter jarak' : Konverter_Jarak,
-    'konverter suhu'  : Konverter_Suhu,
+    'Konversi jarak Km ke Mil' : Konverter_Jarak,
+    'Konversi Celcius ke Fahrenheit'  : Konverter_Suhu,
     'Konversi Jam ke Menit' : jam,
     'Konversi Yard ke Meter' : yard,
     'hampter': kiw,
