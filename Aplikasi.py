@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('Kumpulan Aplikasi Sederhana')
+st.title('Kumpulan Perhitungan Sederhana')
 st.write(''' Kelompok 10
 1. Rahayu Puspita Dewi (7211421001)
 2. Diajeng Ayuning Ati (7211421021)
@@ -71,8 +71,9 @@ def Menghitung_Segitiga() :
     st.write('Luas Segitiga adalah %0.2f' % luas)
 
 def kiw () :
-    st.header('sudah dibilang jangan dibuka')
-    st.image("https://i.pinimg.com/originals/66/0d/5a/660d5af194cc62242ed2bc6a5d88f50e.jpg")
+    st.header('hampter')
+    st.write('hampter')
+    st.image('https://memezila.com/wp-content/Hampter-meme-8263.png')
 
 def diskon () :
 
@@ -84,19 +85,25 @@ def diskon () :
     st.write('Jumlah yang harus anda bayar adalah =','Rp', (float(total)))
 
 def diet_w () :
+    st.header('Menghitung berat badan ideal untuk wanita')
 
     tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
-
     total = (tinggi-100) - (tinggi-100) * 15/100
 
-    st.write(('berat badan ideal anda adalah'),total)
-
+    st.write(('berat badan ideal anda adalah'),total,'KG')
+    st.caption ('kurang dari hasil = berat badan anda kurang ideal')
 def diet_m () :
+    st.header('Menghitung berat badan ideal untuk pria')
+
     tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)',0)
     total = (tinggi-100) - (tinggi-100) * 10/100
-    st.write (('berat badan ideal adalah'),total)
+
+    st.write (('berat badan ideal adalah'),total,'KG')
+    st.caption('kurang dari hasil = berat badan anda kurang ideal')
 
 def mata_uang () :
+    st.header('konversi mata uang Euro ke Rupiah')
+    st.caption('dengan nilai 1 euro = Rp.15.600')
     uang = st.number_input('Masukan Nominal Uang (euro)',0)
     total = uang * 15600
     st.write (('Hasil Konversi'),'Rp', total)
@@ -107,6 +114,7 @@ def jam () :
     st.write (('hasilnya adalah'), ayam,'menit')
 
 def yard () :
+
     yard = st.number_input('masukan ukuran yard',0)
     total = 0.914 * yard
     st.write (('hasilnya adalah'), total,'meter')
@@ -122,7 +130,7 @@ pages = {
     'konverter suhu'  : Konverter_Suhu,
     'Konversi Jam ke Menit' : jam,
     'Konversi Yard ke Meter' : yard,
-    'BONUS! ': kiw,
+    'hampter': kiw,
 
 }
 selected_page = st.selectbox(
