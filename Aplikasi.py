@@ -140,7 +140,7 @@ pages = {
     'Konversi Celcius ke Fahrenheit'  : Konverter_Suhu,
     'Konversi Jam ke Menit' : jam,
     'Konversi Yard ke Meter' : yard,
-    'hampter': kiw,
+    'JANGAN DIBUKA!!! ⚠️⚠️⚠️': kiw,
 
 }
 selected_page = st.selectbox(
