@@ -16,7 +16,7 @@ def diet_m():
     total = (tinggi - 100) - (tinggi - 100) * 10 / 100
 
     st.write('berat badan ideal adalah %0.0f KG' % total)
-    st.caption('kurang dari hasil berarti berat badan kau kurang ideal')
+    st.caption('kurang dari hasil berarti berat badan anda kurang ideal')
 
 
 def diet_w():
@@ -26,7 +26,7 @@ def diet_w():
     total = (tinggi - 100) - (tinggi - 100) * 15 / 100
 
     st.write('berat badan ideal adalah %0.0f KG' % total)
-    st.caption('kurang dari hasil berarti berat badan kau kurang ideal')
+    st.caption('kurang dari hasil berarti berat badan anda kurang ideal')
 
 
 def diskon () :
@@ -140,7 +140,7 @@ pages = {
     'Konversi Celcius ke Fahrenheit'  : Konverter_Suhu,
     'Konversi Jam ke Menit' : jam,
     'Konversi Yard ke Meter' : yard,
-    'JANGAN DIBUKA!!! ⚠️⚠️⚠️': kiw,
+    'hampter': kiw,
 
 }
 selected_page = st.selectbox(
