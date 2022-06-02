@@ -110,7 +110,7 @@ def jam():
 def yard():
     yard = st.number_input('masukan ukuran yard', 0)
     total = 0.914 * yard
-    st.write('Hasil Konversi %0.0f Meter' % total)
+    st.write('Hasil Konversi Meter', total)
 
 
 def blank():
