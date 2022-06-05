@@ -43,7 +43,7 @@ def kos4 () :
 def kos5 () :
     st.image("https://s3.us-east-2.amazonaws.com/dlba-production-bucket/property_images/9425816/aaf0eaa4-3790-4594-8ff2-610040df4896.jpg")
     st.header('kosan herman')
-    st.write('Kamar mandi luar,Kasur,Kipas')
+    st.write('Kamar mandi luar,Kasur,Kipas Tangan')
     st.write('sudah termasuk iuran air, Listrik tidak tersedia')
     st.write('harga Rp 100.000/Bulan')
 
