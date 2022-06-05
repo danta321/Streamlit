@@ -1,150 +1,111 @@
 import streamlit as st
-
-st.title('Kumpulan Perhitungan Sederhana')
-st.write(''' Kelompok 10
-1. Rahayu Puspita Dewi (7211421001)
-2. Diajeng Ayuning Ati (7211421021)
-3. Ayesha Reisla Hanifa (7211421120)
-4. Via Alfu Khasanah (7211421132)
-5. I Gusti Bagus Surya Wedanta (7211421250)''' )
-
-
-def diet_m():
-    st.header('Menghitung berat badan ideal untuk pria')
-
-    tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)', 0)
-    total = (tinggi - 100) - (tinggi - 100) * 10 / 100
-
-    st.write('berat badan ideal adalah %0.0f KG' % total)
-    st.caption('kurang dari hasil berarti berat badan anda kurang ideal')
-
-
-def diet_w():
-    st.header('Menghitung berat badan ideal untuk wanita')
-
-    tinggi = st.number_input('Masukan Tinggi Badan Anda (cm)', 0)
-    total = (tinggi - 100) - (tinggi - 100) * 15 / 100
-
-    st.write('berat badan ideal adalah %0.0f KG' % total)
-    st.caption('kurang dari hasil berarti berat badan anda kurang ideal')
-
-
-def diskon () :
-
-    diskon = st.number_input('tuliskan jumlah diskon',0)
-    harga  = st.number_input('masukan jumlah uang',0,)
-
-    total = (diskon/100) * harga
-
-    st.write('total yang harus anda bayar adalah Rp %0.0f' % total)
-
-
-def mata_uang():
-    st.header('konversi mata uang Euro ke Rupiah')
-    st.caption('dengan nilai 1 euro = Rp.15.600')
-    uang = st.number_input('Masukan Nominal Uang (euro)', 0)
-    total = uang * 15600
-    st.write('Hasil Konversi Rp %0.0f' % total)
-
-
-def Menghitung_Segitiga() :
-    st.header('Menghitung Luas Segitiga')
-    st.caption('Aplikasi ini akan menghitung Luas Segitiga')
-
-    alas = st.number_input('Tulis Alas Segitiga: ',0)
-    tinggi = st.number_input('Tulis Tinggi Segitiga: ',0)
-
-
-    luas = (alas * tinggi) / 2
-
-
-    st.write('Luas Segitiga adalah %0.0f' % luas)
-
-def Menghitung_Kubus():
-    st.header('Menghitung Volume Kubus')
-    st.caption('aplikasi ini akan menghitung volume kubus')
-
-    sisi = st.number_input('Tulis Sisi Kubus: ',0,)
-
-
-    volume = sisi ** 3
-
-
-    st.write('Volume Kubus adalah %0.2f' % volume)
-
-def Konverter_Jarak():
-    st.header('Konverter jarak')
-    st.caption('aplikasi ini akan mengubah angka yang dimasukan dari kilometer menjadi'
-               ' mil')
-
-    kilometer = st.number_input("Tuliskan Jarak dalam Kilometer: ",0)
-
-    faktor_konversi = 0.621371
-
-
-    mil = kilometer * faktor_konversi
-
-
-    st.write('%0.2f Kilometer sama dengan %0.2f Mil' % (kilometer, mil))
-
-def Konverter_Suhu() :
-    st.header('Konverter Suhu')
-    st.caption('Aplikasi ini akan mengubah suhu celcius menjadi fahrenheit')
-
-    celcius = st.number_input("Tuliskan Suhu dalam Celcius: ",0)
-
-
-    fahrenheit = (celcius * 1.8) + 32
-
-
-    st.write('%0.2f Derajat Celcius sama dengan %0.2f Derajat Fahrenheit' % (celcius, fahrenheit))
-
-
-def jam():
-    st.header('Konversi Jam ke Menit')
-    jam = st.number_input('masukan jam', 0)
-    ayam = 60 * jam
-    st.write('Hasil Konversi %0.0f menit' % ayam)
-
-
-def yard():
-    yard = st.number_input('masukan ukuran yard', 0)
-    total = 0.914 * yard
-    st.write('Hasil Konversi Meter', total, 'meter')
-
-
-def blank():
-    st.write ('Silahkan Pilih Sistem')
-
-
+import requests
+import pandas as pd
+st.title('Kosan Bersama')
+st.write('kosan kosan kosan')
 
 def kiw () :
     st.header('hampter')
     st.write('hampter')
     st.image('https://memezila.com/wp-content/Hampter-meme-8263.png')
+def blank () :
+    st.write ('Silahkan Pilih Kosan')
+
+def kos1 () :
+    st.image('https://www.sewakost.com/files/02-2022/ad75368/kost-petojo-sabangan-696958619_large.jpg')
+    st.header('Kosan Berlian')
+    st.write('kamar mandi luar')
+    st.write('Sudah termasuk Iuran Air,Listrik,Wifi,Ada Dapur Dikamar')
+    st.write('Kasur,Bantal disediakan')
+    st.write('harga Rp 500.000/Bulan')
 
 
+def kos2 () :
+    st.image('https://www.sewakost.com/files/03-2021/ad52407/kos-kosan-bebas-aman-dan-2110797795_large.jpg')
+    st.header('Kosan udin')
+    st.write('Kamar Mandi Luar,Sudah termasuk Iuran Air,Listrik')
+    st.write('harga Rp 300.000/Bulan')
 
+def kos3 () :
+    st.image("https://www.sewakost.com/files/03-2020/ad34268/rumah-kost-kosan-damkar-1220752865_large.jpeg")
+    st.header('Kosan Duar')
+    st.write("Sudah termasuk Iuran Air,Listrik,Wifi")
+    st.write("kamar mandi dalam,Almari,Kasur,Meja Belajar")
+    st.write("harga Rp 800.000/Bulan")
 
+def kos4 () :
+    st.image("https://www.sewakost.com/files/03-2020/ad34268/rumah-kost-kosan-damkar-823273766_large.jpeg")
+    st.header('kosan diw')
+    st.write("sudah termasuk Iuran Air,Listrik,Wifi")
+    st.write("kamar mandi Luar,almari,Kasur,AC")
+    st.write("harga Rp 750.000/Bulan")
 
+def kos5 () :
+    st.image("https://s3.us-east-2.amazonaws.com/dlba-production-bucket/property_images/9425816/aaf0eaa4-3790-4594-8ff2-610040df4896.jpg")
+    st.header('kosan herman')
+    st.write('Kamar mandi luar,Kasur,Kipas')
+    st.write('sudah termasuk iuran air, Listrik tidak tersedia')
+    st.write('harga Rp 100.000/Bulan')
 
 pages = {
     '': blank,
-    'Penghitung Berat Badan Ideal (pria)': diet_m,
-    'Penghitung Berat Badan Ideal (wanita)': diet_w,
-    'Menghitung Diskon': diskon,
-    'Konversi Mata Uang Euro ke Rupiah': mata_uang,
-    'Menghitung Luas Segitiga': Menghitung_Segitiga,
-    'Menghitung Volume Kubus': Menghitung_Kubus,
-    'Konversi jarak Km ke Mil' : Konverter_Jarak,
-    'Konversi Celcius ke Fahrenheit'  : Konverter_Suhu,
-    'Konversi Jam ke Menit' : jam,
-    'Konversi Yard ke Meter' : yard,
     '-': kiw,
+    'kos1' : kos1,
+    'kos2' : kos2,
+    'kos3' : kos3,
+    'kos4' : kos4,
+    'kos5' : kos5,
 
 }
 selected_page = st.selectbox(
-    'pilih alat',
+    'Pilih Kosan',
     pages.keys()
 )
 pages[selected_page]()
+
+
+total1 = 0
+total2 = 0
+harga = []
+kosan = ["",'kos1',"kos2",'kos3','kos4','kos5']
+
+
+nama = st.text_input('nama penyewa')
+telp = st.text_input('nomor telpon')
+jenis = st.selectbox('pilih jenis kos',kosan)
+bulan = st.number_input('berapa bulan',0)
+
+
+
+enter = st.button('enter')
+
+if jenis == "kos1":
+    harga = 500000
+    total1 = harga*bulan
+elif jenis == 'kos2':
+    harga = 600000
+    total1 = harga*bulan
+elif jenis == "kos3" :
+    harga = 800000
+    total1 = harga*bulan
+elif jenis == "kos4" :
+    harga = 650000
+    total1 = harga*bulan
+elif jenis == "kos5" :
+    harga = 100000
+    total1 = harga*bulan
+
+
+total = total1
+if enter :
+    st.write("")
+    ("======================Bukti Pemesanan==========================")
+    ("")
+    ("1.Nama Anda = ", nama)
+    ('2.No telp =',telp)
+    ('3.Lama Sewa = %0.0f bulan ' %bulan)
+    ('4.Kosan = ', jenis)
+    ('5.Total biaya = %0.0f'% total)
+    ('Pemilik kosan akan menghubungi anda, harap simpan bukti ini')
+    ("")
+    ("=============================================================")
