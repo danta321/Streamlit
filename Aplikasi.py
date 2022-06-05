@@ -11,7 +11,7 @@ def kiw () :
 def blank () :
     st.write ('Silahkan Pilih Kosan')
 
-def kos3 () :
+def kos4 () :
     st.image('https://www.sewakost.com/files/02-2022/ad75368/kost-petojo-sabangan-696958619_large.jpg')
     st.header('Kosan Berlian')
     st.write('kamar mandi luar')
@@ -20,7 +20,7 @@ def kos3 () :
     st.write('harga Rp 500.000/Bulan')
 
 
-def kos4 () :
+def kos3 () :
     st.image('https://www.sewakost.com/files/03-2021/ad52407/kos-kosan-bebas-aman-dan-2110797795_large.jpg')
     st.header('Kosan udin')
     st.write('Kamar Mandi Luar,Sudah termasuk Iuran Air,Listrik')
