@@ -17,14 +17,14 @@ def kos4 () :
     st.write('kamar mandi luar')
     st.write('Sudah termasuk Iuran Air,Listrik,Wifi,Ada Dapur Dikamar')
     st.write('Kasur,Bantal disediakan')
-    st.write('harga Rp 500.000/Bulan')
+    st.write('harga Rp 300.000/Bulan')
 
 
 def kos3 () :
     st.image('https://www.sewakost.com/files/03-2021/ad52407/kos-kosan-bebas-aman-dan-2110797795_large.jpg')
     st.header('Kosan udin')
     st.write('Kamar Mandi Luar,Sudah termasuk Iuran Air,Listrik')
-    st.write('harga Rp 300.000/Bulan')
+    st.write('harga Rp 400.000/Bulan')
 
 def kos1 () :
     st.image("https://www.sewakost.com/files/03-2020/ad34268/rumah-kost-kosan-damkar-1220752865_large.jpeg")
@@ -80,16 +80,16 @@ bulan = st.number_input('berapa bulan',0)
 enter = st.button('enter')
 
 if jenis == "kos1":
-    harga = 500000
-    total1 = harga*bulan
-elif jenis == 'kos2':
-    harga = 600000
-    total1 = harga*bulan
-elif jenis == "kos3" :
     harga = 800000
     total1 = harga*bulan
+elif jenis == 'kos2':
+    harga = 750000
+    total1 = harga*bulan
+elif jenis == "kos3" :
+    harga = 400000
+    total1 = harga*bulan
 elif jenis == "kos4" :
-    harga = 650000
+    harga = 300000
     total1 = harga*bulan
 elif jenis == "kos5" :
     harga = 100000
