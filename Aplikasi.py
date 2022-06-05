@@ -4,10 +4,7 @@ import pandas as pd
 st.title('Kosan Bersama')
 st.write('kosan kosan kosan')
 
-def kiw () :
-    st.header('hampter')
-    st.write('hampter')
-    st.image('https://memezila.com/wp-content/Hampter-meme-8263.png')
+
 def blank () :
     st.write ('Silahkan Pilih Kosan')
 
@@ -49,7 +46,6 @@ def kos5 () :
 
 pages = {
     '': blank,
-    '-': kiw,
     'kos1' : kos1,
     'kos2' : kos2,
     'kos3' : kos3,
@@ -64,8 +60,8 @@ selected_page = st.selectbox(
 pages[selected_page]()
 
 
-total1 = 0
-total2 = 0
+totale = 0
+
 harga = []
 kosan = ["",'kos1',"kos2",'kos3','kos4','kos5']
 
@@ -81,22 +77,22 @@ enter = st.button('enter')
 
 if jenis == "kos1":
     harga = 800000
-    total1 = harga*bulan
+    totale = harga*bulan
 elif jenis == 'kos2':
     harga = 750000
-    total1 = harga*bulan
+    totale = harga*bulan
 elif jenis == "kos3" :
     harga = 400000
-    total1 = harga*bulan
+    totale = harga*bulan
 elif jenis == "kos4" :
     harga = 300000
-    total1 = harga*bulan
+    totale = harga*bulan
 elif jenis == "kos5" :
     harga = 100000
-    total1 = harga*bulan
+    totale = harga*bulan
 
 
-total = total1
+total = totale
 if enter :
     st.write("")
     ("======================Bukti Pemesanan==========================")
